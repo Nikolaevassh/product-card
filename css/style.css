@@ -25,6 +25,24 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .product-name {
   font-size: 32px;
   font-weight: 700;
@@ -52,6 +70,10 @@ img {
   margin-bottom: 25px;
 }
 
+.product-img-list-wrapper {
+  position: relative;
+}
+
 .product-img-list {
   margin: 0;
   padding: 0;
@@ -67,6 +89,31 @@ img {
 
 .product-img-item:first-child {
   display: block;
+}
+
+.back,
+.next {
+  font-size: 32px;
+  color: #ff4040;
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.next {
+  right: 0;
+}
+
+.back:hover,
+.next:hover {
+  color: #ff0000;
+}
+
+.back:active,
+.next:active {
+  color: #bf3030;
 }
 
 .price {
@@ -97,6 +144,7 @@ img {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
+  border: 1px solid #000000;
 }
 
 .order-form input:last-of-type {
@@ -129,6 +177,7 @@ img {
 
 .tabs-title {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -150,9 +199,7 @@ img {
 }
 
 .tabs-title-item a.current {
-  background-color: #ffffff;
-  border: 1px solid #b3b3b3;
-  border-bottom-color: transparent;
+  background-color: rgba(255, 64, 64, 0.3);
 }
 
 .tabs-title-item a:hover {
@@ -236,4 +283,61 @@ N =  сколько колонок занимает элемент*/
 .col-6 {
   width: calc(100% / 12 * 6 - 30px);
   margin: 0 15px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .col-6 {
+    width: 100%;
+    margin: 0 20px;
+  }
+
+  .back {
+    left: -25px;
+  }
+
+  .next {
+    right: -25px;
+  }
+
+  .price {
+    margin-bottom: 50px;
+  }
+
+  .tabs-title-item {
+    width: 100%;
+  }
+
+  .product-characteristics td:nth-of-type(2) {
+    padding-left: 55px;
+  }
+
+  .product-prop {
+    padding-right: 0;
+  }
+
+  .product-prop::after {
+    content: none;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    padding: 0 35px;
+  }
+
+  .product-img-list-wrapper {
+    padding: 0 20px;
+  }
+
+  .back {
+    left: -10px;
+  }
+
+  .next {
+    right: -10px;
+  }
 }

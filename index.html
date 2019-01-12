@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -18,26 +24,38 @@
       <p class="product-number">Артикул: 271690</p>
       <section class="short-info">
         <div class="row">
-          <ul class="product-img-list col-6">
-            <li class="product-img-item">
-              <img src="img/1.jpg" alt="Наушники JBL JR300 - фото №1" />
-            </li>
-            <li class="product-img-item">
-              <img src="img/2.jpg" alt="Наушники JBL JR300 - фото №2" />
-            </li>
-            <li class="product-img-item">
-              <img src="img/3.jpg" alt="Наушники JBL JR300 - фото №3" />
-            </li>
-            <li class="product-img-item">
-              <img src="img/4.jpg" alt="Наушники JBL JR300 - фото №4" />
-            </li>
-            <li class="product-img-item">
-              <img src="img/5.jpg" alt="Наушники JBL JR300 - фото №5" />
-            </li>
-            <li class="product-img-item">
-              <img src="img/6.jpg" alt="Наушники JBL JR300 - фото №6" />
-            </li>
-          </ul>
+          <div class="col-6 product-img-list-wrapper">
+            <ul class="product-img-list">
+              <li class="product-img-item">
+                <img src="img/1.jpg" alt="Наушники JBL JR300 - фото №1" />
+              </li>
+              <li class="product-img-item">
+                <img src="img/2.jpg" alt="Наушники JBL JR300 - фото №2" />
+              </li>
+              <li class="product-img-item">
+                <img src="img/3.jpg" alt="Наушники JBL JR300 - фото №3" />
+              </li>
+              <li class="product-img-item">
+                <img src="img/4.jpg" alt="Наушники JBL JR300 - фото №4" />
+              </li>
+              <li class="product-img-item">
+                <img src="img/5.jpg" alt="Наушники JBL JR300 - фото №5" />
+              </li>
+              <li class="product-img-item">
+                <img src="img/6.jpg" alt="Наушники JBL JR300 - фото №6" />
+              </li>
+            </ul>
+
+            <button class="back">
+              <i class="fas fa-angle-left"></i>
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <button class="next">
+              <i class="fas fa-angle-right"></i
+              ><span class="visually-hidden">Вперёд</span>
+            </button>
+          </div>
+
           <div class="col-6">
             <span class="price">2500 руб.</span>
             <form class="order-form" action="" method="POST">
